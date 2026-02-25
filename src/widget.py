@@ -25,4 +25,3 @@ def get_date(date_str: str) -> str:
     year, month, day = date_part.split("-")
     return f"{day}.{month}.{year}"
 
-
