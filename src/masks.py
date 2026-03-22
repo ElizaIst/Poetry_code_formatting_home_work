@@ -1,14 +1,14 @@
 def get_mask_card_number(card_number: str) -> str:
-    """Kart numarasını maskeler (Örn: 7000 79** **** 6361)"""
+    """Это скрывает номер карты (например, 7000 79** **** 6361)."""
     if not card_number:
         return "Номер карты отсутствует"
 
-    # Kart numarasını parçalara ayırıp maskeleme işlemi
+    # Процесс детализации и маскировки номера карты.
     return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
 
 
 def get_mask_account(account_number: str) -> str:
-    """Hesap numarasını maskeler (Örn: **4305)"""
+    """Это скрывает номер счета (например, **4305)."""
     if not account_number:
         return "Номер счета отсутствует"
 
