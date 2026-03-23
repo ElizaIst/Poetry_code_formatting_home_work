@@ -13,3 +13,4 @@ def get_mask_account(account_number: str) -> str:
         return "Номер счета отсутствует"
 
     return f"**{account_number[-4:]}"
+

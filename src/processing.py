@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing import Any, Dict, List
 
 
 def filter_by_state(
@@ -20,7 +20,7 @@ def filter_by_state(
 
 
 def sort_by_date(
-    data: List[Dict[str, Any]], reverse: bool = True
+        data: List[Dict[str, Any]], reverse: bool = True
 ) -> List[Dict[str, Any]]:
     """
     Сортирует список словарей по дате (ключ 'date').
