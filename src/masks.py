@@ -1,10 +1,11 @@
-def get_mask_card_number(card_number: int) -> str:
-    """Функция, которая маскирует номер карты в формате XXXX XX** **** XXXX """
-    str_card = str(card_number)
-    return f"{str_card[:4]} {str_card[4:6]}** **** {str_card[-4:]}"
+def get_mask_card_number(card_number: str) -> str:
+    """Маскирует номер карты (XXXX XX** **** XXXX)."""
+    if not card_number or not card_number.isdigit() or len(card_number) != 16:
+        return "Некорректный номер карты"
+    return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
 
-
-def get_mask_account(account_number: int) -> str:
-    """Функция, которая маскирует номер счета в формате **XXXX """
-    str_account = str(account_number)
-    return f"**{str_account[-4:]}"
+def get_mask_account(account_number: str) -> str:
+    """Маскирует номер счета (**XXXX)."""
+    if not account_number or not account_number.isdigit() or len(account_number) < 4:
+        return "Некорректный номер счета"
+    return f"**{account_number[-4:]}"
